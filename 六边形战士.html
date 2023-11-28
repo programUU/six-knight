@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            transform-style: preserve-3d;
+            width: 600px;
+            height: 600px;
+            margin: 400px;
+            position: relative;
+            transform: rotate3d(1, 1, 1, 0deg);
+            perspective: 1000px;
+            animation: rotate 5s linear 10s infinite;
+        }
+
+        .one {
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            font-size: 30px;
+            line-height: 200px;
+            text-align: center;
+            font-weight: bolder;
+            transform: rotate3d(1, 1, 1, 0deg);
+
+            background-size: contain;
+        }
+
+        .two {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            font-size: 30px;
+            line-height: 200px;
+            text-align: center;
+            font-weight: bolder;
+            transform: rotate3d(1, 1, 1, 0deg);
+            transition: top 3s linear 0s;
+        }
+
+        li {
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            position: absolute;
+            transition: transform 5s linear 3s;
+            background-size: contain;
+        }
+
+        .one li:nth-child(1) {
+            background-image: url(images-follow/flower4.jpg);
+        }
+
+        .one li:nth-child(2) {
+            background-image: url(images-follow/flower1.jpg);
+        }
+
+        .one li:nth-child(3) {
+            background-image: url(images-follow/flower2.jpg);
+        }
+
+        .two li:nth-child(1) {
+            background-image: url(images-follow/flower10.jpg);
+        }
+
+        .two li:nth-child(2) {
+            background-image: url(images-follow/flower11.jpg);
+        }
+
+        .two li:nth-child(3) {
+            background-image: url(images-follow/flower12.jpg);
+        }
+        /*         .one :nth-child(1) {
+            transform: rotateX(90deg);
+        }
+
+        .one :nth-child(2) {
+            transform-origin: 0 100px;
+            transform: rotateX(90deg) translateX(200px)  rotateY(60deg);
+
+        }
+
+        .one :nth-child(3) {
+            transform-origin: 200px 100px;
+            transform: rotateX(90deg)  translateX(-200px) rotateY(-60deg);
+        }
+        .two :nth-child(1){
+            transform: rotateX(90deg);
+        }
+        .two :nth-child(2){
+            transform-origin: 200px 100px;
+            transform: rotateX(90deg) translateX(-200px) rotateY(60deg);
+        }
+        .two :nth-child(3){
+            transform-origin:  0 100px;
+            transform: rotateX(90deg) translateX(200px)  rotateY(-60deg);
+        } */
+        div:hover .one li:nth-child(1) {
+            transform: rotateX(90deg);
+        }
+
+        div:hover .one li:nth-child(2) {
+            transform-origin: 0 100px;
+            transform: rotateX(90deg) translateX(200px) rotateY(60deg);
+        }
+
+        div:hover .one li:nth-child(3) {
+            transform-origin: 200px 100px;
+            transform: rotateX(90deg) translateX(-200px) rotateY(-60deg);
+        }
+
+        div:hover .two li:nth-child(1) {
+            transform: rotateX(90deg);
+        }
+
+        div:hover .two li:nth-child(2) {
+            transform-origin: 200px 100px;
+            transform: rotateX(90deg) translateX(-200px) rotateY(60deg);
+        }
+
+        div:hover .two li:nth-child(3) {
+            transform-origin: 0 100px;
+            transform: rotateX(90deg) translateX(200px) rotateY(-60deg);
+        }
+
+        div:hover .two {
+            /* top: 316px; */
+            top: 345px
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate3d(1, 1, 1, 0deg);
+            }
+
+            to {
+                transform: rotate3d(1, 1, 1, 360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul class="one">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class="two">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>
